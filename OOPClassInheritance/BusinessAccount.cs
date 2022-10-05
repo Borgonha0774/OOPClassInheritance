@@ -14,14 +14,17 @@ namespace OOPClassInheritance
 
         public double LoanLimit { get; set; }
 
-        public BusinessAccount(double loanLimit)
+        //atraves da super classe ( : base) posso reutilizar o construtor do Account
+        public BusinessAccount(int number, string holder, double balance, double loanLimit)
+            : base(number, holder, balance)
         {
             LoanLimit = loanLimit;
         }
 
         public void Loan(double amount)
         {
-            amount = amount * LoanLimit;    
+            if (amount <= LoanLimit)
+                Balance += amount;
         }
     }
 }
