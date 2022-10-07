@@ -24,5 +24,12 @@ namespace OOPClassInheritance
         {
             Balance += Balance * InterestRate;
         }
+
+        //sobrescreve a função withdraw da classe account
+        public override void WithDraw(double amount)
+        {
+            base.WithDraw(amount);
+            Balance -= 2.0;
+        }
     }
 }

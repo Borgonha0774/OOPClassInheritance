@@ -24,9 +24,10 @@ namespace OOPClassInheritance
             Balance = balance;
         }
 
-        public void WithDraw(double amount)
+        //Permite a sobreposição ou sobrescrita adicionar  (virtual)
+        public virtual void WithDraw(double amount)
         {
-            Balance -= amount;
+            Balance -= amount + 5.0                                                       ;
         }
 
         public void Deposit(double amount)
