@@ -22,7 +22,7 @@ namespace OOPClassInheritance
 
         public void UpdateBalance()
         {
-            Balance = Balance * InterestRate;
+            Balance += Balance * InterestRate;
         }
     }
 }
